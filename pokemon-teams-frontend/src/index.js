@@ -1,3 +1,40 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//     const BASE_URL = 'http://localhost:3000'
+//     const fetchTrainers = url => {
+//         fetch(`${url}/trainers`).then(resp => resp.json())
+//         .then(trainers => {
+//             renderTrainers(trainers)
+//         })
+//     }
+
+//     const renderTrainers = trainersArray => {
+//         trainersArray.forEach(trainer => {
+//             let div = createTrainerDiv(trainer)
+//             console.log(div)
+//         })
+//     }
+
+//     const createTrainerDiv = trainer => {
+//         let div = document.createElement('div')
+//         div.className = 'card'
+//         div.dataset.id = trainer.id
+
+//     }
+
+
+//     fetchTrainers(BASE_URL)
+// })
+
+
+
+
+
+
+
+
+
+
+
 const BASE_URL = "http://localhost:3000"
 const TRAINERS_URL = `${BASE_URL}/trainers`
 const POKEMONS_URL = `${BASE_URL}/pokemons`
@@ -60,6 +97,8 @@ const renderPokemons = pokemons => {
     }).join("")
 }
 
+
+
 const clickHandler = () => {
     document.addEventListener("click", (e) => {
         if (e.target.textContent === "Add Pokemon") {
@@ -71,8 +110,6 @@ const clickHandler = () => {
             const button = e.target
             const id = button.dataset.pokemonId
             deletePokemon(id)
-            
-            
         }
     })
 }
